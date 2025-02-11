@@ -8,4 +8,10 @@ test("Recommended built-in locators examples", async ({ page }) => {
   await firstName.clear();
 
   await page.getByLabel("First name").fill("Bob");
+
+  await page.getByRole("button", { name: "Register", exact: true }).click();
+
+  const warning = page.getByText("Valid last name is required");
+
+  await expect(warning).toBeVisible();
 });
