@@ -4,3 +4,6 @@ test-results/
 
 .idea/
 playwright-report/
+
+venv/
+.venv
